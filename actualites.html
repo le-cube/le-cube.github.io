@@ -5,9 +5,9 @@ menu: main
 weight : 60
 ---
 
-<h1>Actualités <br>
+<h2>Actualités <br>
 <small>Suivez la vie de notre projet sur
-<a href="http://www.facebook.com/#!/profile.php?id=100003120499916&amp;sk=wall">Facebook</a></small></h1>
+<a href="http://www.facebook.com/#!/profile.php?id=100003120499916&amp;sk=wall">Facebook</a></small></h2>
 
 <div class="row events">
 
@@ -23,7 +23,7 @@ weight : 60
             <hr>
             {% if evtDate <= curDate and printedPastEventTitle == false %}
                 {% assign printedPastEventTitle = true %}
-                <p class="pastEventMarker"><small>Manifestations passées</small></p>
+                <h3 class="pastEventMarker">Manifestations passées</h3>
             {% endif %}
         <div class="row">
 
@@ -40,6 +40,11 @@ weight : 60
                         <h3 itemprop="name">
                         {{e.name}}
                         </h3>
+                        {% if e.description %}
+                        <div class="eventDescription">
+                            <p>{{ e.description }}</p>
+                        </div>
+                        {% endif %}
                         {% if e.site %}
                             Site : <a itemprop="url" href="{{e.site}}">{{e.site}}</a>
                         {% endif %}
@@ -48,7 +53,7 @@ weight : 60
                                 {% if e.endDate %}
                                 <meta itemprop="startDate" content="{{ e.startDate | date: '%Y-%d-%m' }}">du {{ e.startDate | date: '%d/%m/%Y' }}
                                 <meta itemprop="endDate" content="{{ e.endDate | date: '%Y-%d-%m' }}">au {{ e.endDate | date: '%d/%m/%Y' }}
-                                {% else %}
+                                {% elsif e.startDate %}
                                 <meta itemprop="startDate" content="{{ e.startDate | date: '%Y-%d-%m' }}">le {{ e.startDate | date: '%d/%m/%Y' }}
                                 {% endif %}
                             </div>

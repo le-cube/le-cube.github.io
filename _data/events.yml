@@ -4,18 +4,112 @@
 # l'ordre est important !!!!
 
 
-- name: Journées du patrimoine au Cube
-  description: "A l'occasion des Journées Européennes du Patrimoine, Mirel&Cizek vous accueilleront au Cube les 20 et 21 septembre de 15h à 20h"
+- name: Exposition « C'est humain » à la gallerie Angel'Art à Carpentras
+  description: "Performance à la galerie Angel'Art lors du vernissage de l'exposition « C'est humain » le mardi 30 juin à partir de 19h."
   site:
-  startDate: 20/09/2014
-  endDate: 21/09/2014
+  startDate: 30/06/2015
+  endDate: 30/06/2015
+  adresse: "Galerie Angel'Art, 59 rue Raspail"
+  city: Carpentras
+  postCode: 84200
+  country: France
+  comments: |
+  image: flyer-carpentra-juin-2015.jpg
+  show : true
+
+- name: Michel Rion accueille Mirel&Cizek à l'occasion de son vernissage.
+  description: ""
+  site:
+  startDate: 09/08/2015
+  endDate: 09/08/2015
+  adresse: "Musée de la Terre de Gorze"
+  city: Gorze
+  postCode: 57680
+  country: France
+  comments: |
+     Vernissage le 9 août 2015 vers 16h30.
+     L'exposition de Michel Rion se tiendra du 8 août au 13 septembre 2015
+  image: expo-michel-rion-gorze.jpg
+  show : true
+
+- name: Journées du patrimoine au Cube
+  description: "A l'occasion des Journées Européennes du Patrimoine, Mirel&Cizek vous accueilleront au Cube les 19 et 20 septembre de 15h à 20h"
+  site:
+  startDate: 20/09/2015
+  endDate: 21/09/2015
   adresse: "Espace Cube - 6, rue Robert Schuman"
   city: Briey
   postCode: 54150
   country: France
   comments: |
-       "Accueil du public de 15h à 20h"
+       "Mirel et Cizek accueilleront le public de 15h à 20h"
   image: journees-du-patrimoine-2014.jpg
+  show : true
+
+- name: Nouvelles activités
+  description: "De nouvelles activités seront proposées au Cube à partir de septembre (entre autres: ateliers)"
+  site:
+  startDate:
+  endDate:
+  adresse: "Espace Cube - 6, rue Robert Schuman"
+  city: Briey
+  postCode: 54150
+  country: France
+  comments:
+  image:
+  show : true
+
+- name: Algrange
+  description: Exposition des Hybrides Patibulaires et performance de Mirel et Cizek à Algrange - octobre-novembre 2015
+  site:
+  startDate:
+  endDate:
+  adresse: ""
+  city: Briey
+  postCode: 54150
+  country: France
+  comments: |
+  image:
+  show : false
+
+- name: Expositions au Foyer des Jeunes Travailleurs Ste Constance à Metz
+  description: Exposition des Hybrides Patibulaires et du groupe d'artistes "C'est Humain"
+  site:
+  startDate: 01/06/2015
+  endDate: 06/06/2015
+  adresse: "16 Rue Gabriel Pierné"
+  city: Metz
+  postCode: 57000
+  country: France
+  comments: |
+     Performance exeptionnelle de Mirel&Cizek à l'occasion du vernissage le 03 juin à 17h30
+  image: mirel-cizek-fjt-metz.jpg
+  show : true
+
+- name: Mariage de Mirel&Cizek au restaurant Le Pépé Rosso à Metz
+  description:
+  site:
+  startDate: 29/05/2015
+  endDate:
+  adresse: "81 Rue du 20e Corps Américain"
+  city: Metz
+  postCode: 57000
+  country: France
+  comments: |
+  image: mirel-cizek-pepe-rosso.jpg
+  show : true
+
+- name: Vernissage du groupe d'artiste "C'est Humain"
+  description: Première exposition du groupe d'artistes "C'est Humain"
+  site: http://cube.fr/c-est-humain
+  startDate: 15/03/2015
+  endDate:
+  adresse: "Espace Cube - 6, rue Robert Schuman"
+  city: Briey
+  postCode: 54150
+  country: France
+  comments: |
+  image: c-est-humain-au-cube.jpg
   show : true
 
 - name: Inauguration du Bar des Hybrides Patibulaires
