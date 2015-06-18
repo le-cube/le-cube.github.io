@@ -1,0 +1,52 @@
+# les expos
+# classement par ordre chronologique inverse
+# les plus récentes sont en haut de la page
+# l'ordre est important !!!!
+
+
+- name: Journées du patrimoine au Cube
+  description: "A l'occasion des Journées Européennes du Patrimoine, Mirel&Cizek vous accueilleront au Cube les 20 et 21 septembre de 15h à 20h"
+  site:
+  startDate: 20/09/2014
+  endDate: 21/09/2014
+  adresse: "Espace Cube - 6, rue Robert Schuman"
+  city: Briey
+  postCode: 54150
+  country: France
+  comments: |
+       "Accueil du public de 15h à 20h"
+  image: journees-du-patrimoine-2014.jpg
+  show : true
+
+- name: Inauguration du Bar des Hybrides Patibulaires
+  description: Ouverture officielle de l'espace d'exposition permanent du Cube
+  site:
+  startDate: 21/06/2014
+  endDate: 22/06/2014
+  adresse: Espace Cube - 6, rue Robert Schuman
+  city: Briey
+  postCode: 54150
+  country: France
+  comments: |
+       Inauguration le samedi 21 juin à partir de 12h
+       (Par la suite voir horaires d'ouverture sur la page <a href="./le-bar-des-hybrides.html">Le Bar des Hybrides</a>)
+  image: inauguration-bar-des-hybrides-patibulaires.jpg
+  show : true
+
+
+
+- name: On Connait la Musique A l'espace ADAGIO à Thionville
+  description: Exposition organisée par la municipalité de Thionville
+  site:
+  startDate: 07/01/2014
+  endDate: 22/01/2014
+  adresse: Espace ADAGIO (Conservatoire de musique), 8 place Marie-Louise,
+  city: Thionville
+  postCode: 57100
+  country: France
+  comments: |
+       Vernissage le vendredi 10 janvier à partir de 19h
+       Exposition du 7 au 22 janvier 2014 du lundi au vendredi de 16h à 18h
+       (En dehors de ces horaires, s'adresser à l'accueil, tél. 03 82 88 26 87)
+  image: mirel-et-cizek-on-connait-la-musique.jpg
+  show : true

@@ -1,0 +1,70 @@
+{% assign first = null %}{% assign previous = null %}{% assign current = null %}{% assign next = null %}
+{% for cat in site.data.categories %}{% for p in site.pages | sort:"name" %}{% if p.category == cat.slug and p.show == 'oui' %}
+  {% if first == null %}{% assign first = p %}{% endif %}
+  {% if current != null and next == null %}{% assign next = p %}{% endif %}
+  {% if p.title == page.title %}{% assign current = p %}{% if currentPrevious != null %}{% assign previous = currentPrevious %}{% endif %}{% endif %}
+  {% if current == null %}{% assign currentPrevious = p %}{% endif %}
+  {% assign last = p %}
+{% endif %}{% endfor %}{% endfor %}
+{% if previous == null %}{% assign previous = last %}{% endif %}{% if next == null %}{% assign next = first %}{% endif %}
+<div class="col-md-8">
+  <h2><small><a href="{{ site.baseurl }}/les-hybrides-patibulaires.html">Les Hybrides Patibulaires</a></small> &gt; {{ page.title }}</h2>
+</div>
+<div class="col-md-4">
+  <div class="subnavLinks clearfix">
+    <h5><a href="{{ site.baseurl }}{{ previous.url }}" class="btn btn-default btn-xs">&lt; {{ previous.title }}</a> |
+    <a href="{{ site.baseurl }}{{ next.url }}" class="btn btn-default btn-xs">{{ next.title }} &gt;</a></h5>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-1 col-sm-4">
+        <p><strong>{{ page.legende }}</strong></p>
+        <p>{{ page.texte }}</p>
+        {% if page.dimensions %}<p>Dimension : {{ page.dimensions }}</p>{% endif %}
+        {% if page.prix %}<p>Prix : {{ page.prix }}</p>{% endif %}
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <img src="{{ site.baseurl }}/img/{{ page.category }}/{{ page.slug }}.jpg" alt="p.title" class="img-responsive">
+    </div>
+</div>
+{% if page.images.size > 0 %}
+    {% include _galleryNoscript.html %}
+    {% include _galleryBigImageTemplate.html %}
+
+    <div class="row">
+      <div class="col-lg-10 col-md-offset-1">
+        <h3>Galerie</h3>
+        <div id="rg-gallery" class="rg-gallery">
+          <div class="rg-thumbs">
+            <div class="es-carousel-wrapper">
+              <div class="es-nav">
+              </div>
+              <div class="es-carousel">
+                <ul class="clearfix">
+        {% for image in page.images %}
+            {% assign imgAlt   = page.title | append : ' - ' | append : site.title %}
+            {% assign thumbUrl = site.baseurl | append : '/img/hybrides/thumbs/' | append : image %}
+            {% assign imgUrl = site.baseurl | append : '/img/hybrides/' | append : image %}
+            {% assign index = forloop.index | minus: 1 %}
+            <li>
+                  <a href="{{ imgUrl }}">
+                      <img src="{{ thumbUrl }}" data-index="{{ index }}" alt="{{ imgAlt }}" class="thumbImage">
+                  </a>
+            </li>
+        {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div><!-- rg-thumbs -->
+        </div>
+      </div>
+    </div>
+    <script>
+    var EFGallery           = {{ page | jsonify }};
+    var siteImgPath         = '{{ site.baseurl }}/img/';
+    var EFGalleryImagesPath = siteImgPath + 'hybrides/';
+    // DEPRECATE THIS !!!
+    var EFGalleryDefaults   = {{ site.galleryDefaultSettings | jsonify }};
+    </script>
+{% endif %}

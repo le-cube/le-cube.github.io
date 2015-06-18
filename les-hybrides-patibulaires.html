@@ -1,0 +1,35 @@
+---
+layout: default
+title: Les Hybrides Patibulaires
+menu: main
+weight : 30
+---
+
+<h2>Les Hybrides Patibulaires</h2>
+<div class="col-md-12 hybrides">
+    <div class="row">
+    {% for cat in site.data.categories %}{% assign objectInRow = 0 %}
+        <div class="col-md-12">
+        <h3>{{ cat.name }}</h3>
+
+{% for p in site.pages | sort:"name" %}{% if p.category == cat.slug and p.show == 'oui' %}
+{% assign objectInRow = objectInRow | plus: 1 %}{% assign pageUrl = site.baseurl | append : p.url %}{% assign pageImg = site.baseurl | append : '/img/' | append : p.category | append : '/thumbs/' | append : p.slug | append: '.jpg' %}
+<figure class="col-md-6">
+    <a href="{{ pageUrl }}" class="imgLink col-md-6">
+        <img src="{{ pageImg }}" alt="{{p.title}}" class="img-responsive">
+    </a>
+    <figcaption class="col-md-6">
+        <h4><a href="{{ pageUrl }}">{{ p.title }}</a></h4>
+        <p>{{ p.legende }}</p>
+        <a href="{{ pageUrl }}" class="moreLink"><small>(voir fiche)</small></a>
+    </figcaption>
+</figure>
+{% if objectInRow == 2 %}{% assign objectInRow = 0 %}<hr class="col-md-12 separator">{% endif %}
+
+{% endif %}
+{% endfor %}
+
+        </div>
+    {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,9 @@
+# les categories
+
+- name: Les Hybrides
+  slug: hybrides
+- name: Accessoires
+  slug: accessoires
+- name: Photographies encadrées à tirage unique
+  slug: photo
+

@@ -1,0 +1,2 @@
+{% capture srcset %}{% for i in resized %}{% if forloop.index == 1 %}{% assign first = i %}{% endif %}{{ baseurl }}/{{ i.path }} {{ i.width }}w,{% endfor %}{% endcapture %}
+<img src="{{ baseurl }}/{{ first.path }}" srcset="{{ srcset | strip_newlines }} {{ baseurl }}/{{ first.path }} {{ first.width }}w">

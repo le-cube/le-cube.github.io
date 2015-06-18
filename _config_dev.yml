@@ -1,0 +1,9 @@
+# Site settings for dev env
+# those settings will overwrite prod settings if you build with :
+# jekyll build --config _config.yml,_config-dev.yml
+
+baseurl: ""
+url: "http://cube.ng"
+
+# destination folder for dev env
+destination: _site

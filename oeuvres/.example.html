@@ -1,0 +1,51 @@
+---
+# Nom de l'oeuvre
+title: Eltric
+
+# ordre dans le menu hybrides (entre 1 et 1000)
+ordre: 20
+
+# le slug est le nom de l'hybride en minuscules
+# tout ce qui n'est pas alphanumérique (a-b 0-9)
+# il est utilisé pour générer le lien vers l'image d'illustration
+slug: icroc
+
+# Si cet hybride est présent dans la liste / menu
+# oui : présent
+# non : absent
+show: oui
+
+# legende (facultatif)
+# exemple : Animal de compagnie très cool tant qu'il a à manger.
+legende: Animal de compagnie très cool tant qu'il a à manger.
+
+# texte (facultatif)
+# exemple :  |
+       Animal de compagnie très cool tant qu'il a à manger.
+       Animal de compagnie très cool tant qu'il a à manger.
+       Animal de compagnie très cool tant qu'il a à manger.
+
+texte: |
+       Animal de compagnie très cool tant qu'il a à manger.
+       Animal de compagnie très cool tant qu'il a à manger.
+       Animal de compagnie très cool tant qu'il a à manger.
+
+# dimensions (facultatif)
+# exemple : hauteur 1m, largeur 2m
+dimensions: hauteur 1m, largeur 2m
+
+# images supplémentaires utilisées sur la page de détail
+images:
+- icroc1.jpg
+- icroc2.jpg
+
+# le modèle de page utilisé
+layout: hybrides
+
+# nom du menu dans lequel est présente cette page
+menu: hybrides
+---
+{% comment %}SUPPRIMER TOUTES LES LIGNES COMMENCANT PAR # CI-DESSUS{% endcomment %}
+{% include _hybride.html %}
+
+

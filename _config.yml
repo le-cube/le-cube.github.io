@@ -1,0 +1,83 @@
+# Site settings
+name: Mirel&Cizek
+title: Mirel&Cizek
+email: mirel-cizek@cube.fr
+description: "Mirel&Cizek - Rogue Taxidermy"
+baseurl: ""
+url: "http://cube.fr"
+# destination folder for prod env
+# destination: _deploy
+
+# Build settings
+markdown: kramdown
+permalinks: pretty
+
+exclude: [LICENSE, README.md, Rakefile, c-est-humain]
+
+# DEPRECATED
+galleryDefaultSettings:
+    imgDefaultExtension: .jpg
+    imgDefaultThumbAppendString: -75
+    imgDefaultFormats:
+        500: -500
+    imgAltAppendString: ' - Mirel&Cizek'
+
+full_rebuild: true
+
+sass:
+  # loading path from site root
+  # default to _sass
+  sass_dir: assets/css
+
+  # style : nested (default), compact, compressed, expanded
+  #         :nested, :compact, :compressed, :expanded also works
+  # see http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  # on a typical twitter bootstrap stats are :
+  # nested 138,7kB, compact 129,1kB, expanded 135,9 kB, compressed 122,4 kB
+  style: compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      publish: true
+
+#gems:
+#  - /home/djacquel/.rbenv/versions/2.1.1/lib/ruby/gems/2.1.0/gems/jekyll-responsive_image-0.11.2
+
+responsive_image:
+  # [Required]
+  # Path to the image template.
+  template: _includes/responsive-image.html
+
+  # [Optional, Default: 85]
+  # Quality to use when resizing images.
+  default_quality: 60
+
+  # [Optional, Default: []]
+  # An array of resize configuration objects. Each object must contain at least
+  # a `width` value.
+  sizes:
+    - width: 150  # [Required] How wide the resized image will be.
+      quality: 50 # [Optional] Overrides default_quality for this size.
+
+    - width: 480
+
+    - width: 800
+
+    - width: 1400
+      quality: 70
+
+  # [Optional, Default: assets/resized/%{filename}-%{width}x%{height}.%{extension}]
+  # The template used when generating filenames for resized images.
+  #
+  # Parameters available are:
+  #   %{basename}    Basename of the file (assets/some-file.jpg => some-file.jpg)
+  #   %{filename}    Basename without the extension (assets/some-file.jpg => some-file)
+  #   %{extension}   Extension of the file (assets/some-file.jpg => jpg)
+  #   %{width}       Width of the resized image
+  #   %{height}      Height of the resized image
+  #
+  output_path_format: img/resized/%{width}/%{basename}

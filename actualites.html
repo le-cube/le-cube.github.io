@@ -1,0 +1,91 @@
+---
+layout: default
+title: Actualités
+menu: main
+weight : 60
+---
+
+<h1>Actualités <br>
+<small>Suivez la vie de notre projet sur
+<a href="http://www.facebook.com/#!/profile.php?id=100003120499916&amp;sk=wall">Facebook</a></small></h1>
+
+<div class="row events">
+
+    <h3>Prochains événements</h3>
+    <div class="col-md-12">
+    {% assign curDate = site.time | date: '%s' %}
+    {% assign printedPastEventTitle = false %}
+    {% assign descriptionDivClass = 'col-md-8 col-md-offset-2' %}
+
+    {% for e in site.data.events %}
+        {% if e.show == true %}
+            {% assign evtDate = e.endDate | date: '%s' %}
+            <hr>
+            {% if evtDate <= curDate and printedPastEventTitle == false %}
+                {% assign printedPastEventTitle = true %}
+                <p class="pastEventMarker"><small>Manifestations passées</small></p>
+            {% endif %}
+        <div class="row">
+
+        {% if e.image %}
+            {% assign descriptionDivClass = 'col-md-6' %}
+            <div class="col-md-6 eventImage">
+                <img src="./img/actu/{{ e.image }}" alt="{{e.name}}" class="img-responsive">
+            </div>
+        {% endif %}
+
+            <div class="{{ descriptionDivClass }}">
+                <div class="event">
+                    <div itemscope itemtype="http://schema.org/Event">
+                        <h3 itemprop="name">
+                        {{e.name}}
+                        </h3>
+                        {% if e.site %}
+                            Site : <a itemprop="url" href="{{e.site}}">{{e.site}}</a>
+                        {% endif %}
+                        <div itemprop="description">
+                            <div>
+                                {% if e.endDate %}
+                                <meta itemprop="startDate" content="{{ e.startDate | date: '%Y-%d-%m' }}">du {{ e.startDate | date: '%d/%m/%Y' }}
+                                <meta itemprop="endDate" content="{{ e.endDate | date: '%Y-%d-%m' }}">au {{ e.endDate | date: '%d/%m/%Y' }}
+                                {% else %}
+                                <meta itemprop="startDate" content="{{ e.startDate | date: '%Y-%d-%m' }}">le {{ e.startDate | date: '%d/%m/%Y' }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+                        <div>
+                            <span itemprop="streetAddress">{{ e.adresse }}</span>
+                            <br><span itemprop="postalCode">{{ e.postCode }}</span>
+                            - <span itemprop="addressLocality">{{ e.city }}</span>
+                            - <span itemprop="addressCountry">{{ e.country }}</span>
+                        </div>
+                    </div>
+                    {% if e.comments %}
+                    <div class="eventComments">
+                        <p>{{ e.comments }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="row">
+           <div class="col-sm-8">
+            <p>Adhérant à la <a href="http://www.roguetaxidermy.com/" class="noIcon">MART - Minnesota Association of Rogue Taxidermists</a></p>
+            </div>
+            <div class="col-sm-4 visible-lg">
+                <a href="http://www.roguetaxidermy.com/" class="noIcon">
+                    <img src="img/logo-mart.gif" width="300" height="248" class="img-responsive">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

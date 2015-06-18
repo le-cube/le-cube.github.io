@@ -1,0 +1,20 @@
+---
+layout: default
+title: galleria
+---
+
+<h2>Galleria</h2>
+<style>
+    .galleria{ width: auto; height: 400px; background: #000 }
+</style>
+<div class="galleria">
+
+</div>
+<script>
+    Galleria.loadTheme('{{site.baseurl}}/assets/js/galleria/src/themes/classic/galleria.classic.js');
+    Galleria.configure({
+        debug: true, // debug is now off for deployment
+        imageCrop: false
+    });
+    Galleria.run('.galleria');
+</script>
