@@ -35,15 +35,15 @@
 - name: Journées du patrimoine au Cube
   description: "A l'occasion des Journées Européennes du Patrimoine, Mirel&Cizek vous accueilleront au Cube les 19 et 20 septembre de 15h à 20h"
   site:
-  startDate: 20/09/2015
-  endDate: 21/09/2015
+  startDate: 19/09/2015
+  endDate: 20/09/2015
   adresse: "Espace Cube - 6, rue Robert Schuman"
   city: Briey
   postCode: 54150
   country: France
   comments: |
        "Mirel et Cizek accueilleront le public de 15h à 20h"
-  image: journees-du-patrimoine-2014.jpg
+  image: journees-du-patrimoine-2015.jpg
   show : true
 
 - name: Nouvelles activités
