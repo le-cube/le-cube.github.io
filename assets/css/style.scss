@@ -61,6 +61,12 @@ body{
     }
 }
 
+.langButtons{
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
+
 .content a,
 footer a{
     border-bottom: 1px solid $text-color;
@@ -120,7 +126,7 @@ h1{
 }
 
 blockquote{
-    background: #eee;
+    background: #111;
 }
 blockquote p{
     font-style: italic;
