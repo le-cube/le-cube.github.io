@@ -62,17 +62,17 @@
   show : true
 
 - name: Algrange
-  description: Exposition des Hybrides Patibulaires et performance de Mirel et Cizek à Algrange - octobre-novembre 2015
-  site:
-  startDate:
-  endDate:
-  adresse: ""
-  city: Briey
-  postCode: 54150
+  description: Exposition des Hybrides Patibulaires et performance de Mirel et Cizek à Algrange le 11 septembre 2015 à 18h
+  site: galerie-guy-pensa.fr
+  startDate: 11/09/2015
+  endDate: 24/10/2015
+  adresse: "7 rue de Londres"
+  city: Algrange
+  postCode: 57440
   country: France
-  comments: |
+  comments: |horaires: du mardi au samedi de 10h à 12h et de 14h à 18h
   image:
-  show : false
+  show : false  
 
 - name: Expositions au Foyer des Jeunes Travailleurs Ste Constance à Metz
   description: Exposition des Hybrides Patibulaires et du groupe d'artistes "C'est Humain"
