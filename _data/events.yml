@@ -4,11 +4,25 @@
 # l'ordre est important !!!!
 
 
+- name: Journées du patrimoine au Cube
+  description: "A l'occasion des Journées Européennes du Patrimoine, Mirel&Cizek vous accueilleront au Cube les 19 et 20 septembre de 15h à 20h"
+  site:
+  startDate: 19/09/2015
+  endDate: 20/09/2015
+  adresse: "Espace Cube - 6, rue Robert Schuman"
+  city: Briey
+  postCode: 54150
+  country: France
+  comments: |
+       "Mirel et Cizek accueilleront le public de 15h à 20h"
+  image: journees-du-patrimoine-2015.jpg
+  show : true
+  
 - name: Exposition « C'est humain » à la gallerie Angel'Art à Carpentras
   description: "Performance à la galerie Angel'Art lors du vernissage de l'exposition « C'est humain » le mardi 30 juin à partir de 19h."
   site:
   startDate: 30/06/2015
-  endDate: 30/06/2015
+  endDate: 31/08/2015
   adresse: "Galerie Angel'Art, 59 rue Raspail"
   city: Carpentras
   postCode: 84200
@@ -32,19 +46,7 @@
   image: expo-michel-rion-gorze.jpg
   show : true
 
-- name: Journées du patrimoine au Cube
-  description: "A l'occasion des Journées Européennes du Patrimoine, Mirel&Cizek vous accueilleront au Cube les 19 et 20 septembre de 15h à 20h"
-  site:
-  startDate: 19/09/2015
-  endDate: 20/09/2015
-  adresse: "Espace Cube - 6, rue Robert Schuman"
-  city: Briey
-  postCode: 54150
-  country: France
-  comments: |
-       "Mirel et Cizek accueilleront le public de 15h à 20h"
-  image: journees-du-patrimoine-2015.jpg
-  show : true
+
 
 - name: Nouvelles activités
   description: "De nouvelles activités seront proposées au Cube à partir de septembre (entre autres: ateliers)"
