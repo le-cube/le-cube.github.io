@@ -17,7 +17,7 @@
        "Mirel et Cizek accueilleront le public de 15h à 20h"
   image: journees-du-patrimoine-2015.jpg
   show : true
-  
+
 - name: Exposition « C'est humain » à la gallerie Angel'Art à Carpentras
   description: "Performance à la galerie Angel'Art lors du vernissage de l'exposition « C'est humain » le mardi 30 juin à partir de 19h."
   site:
@@ -70,9 +70,10 @@
   city: Algrange
   postCode: 57440
   country: France
-  comments: |horaires: du mardi au samedi de 10h à 12h et de 14h à 18h
+  comments: |
+          horaires: du mardi au samedi de 10h à 12h et de 14h à 18h
   image:
-  show : false  
+  show : false
 
 - name: Expositions au Foyer des Jeunes Travailleurs Ste Constance à Metz
   description: Exposition des Hybrides Patibulaires et du groupe d'artistes "C'est Humain"
