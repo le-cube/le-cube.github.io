@@ -3,7 +3,6 @@
 # les plus récentes sont en haut de la page
 # l'ordre est important !!!!
 
-
 - name: Journées du patrimoine au Cube
   description: "A l'occasion des Journées Européennes du Patrimoine, Mirel&Cizek vous accueilleront au Cube les 19 et 20 septembre de 15h à 20h"
   site:
@@ -47,7 +46,6 @@
   show : true
 
 
-
 - name: Nouvelles activités
   description: "De nouvelles activités seront proposées au Cube à partir de septembre (entre autres: ateliers)"
   site:
@@ -73,7 +71,7 @@
   comments: |
           horaires: du mardi au samedi de 10h à 12h et de 14h à 18h
   image:
-  show : false
+  show : true
 
 - name: Expositions au Foyer des Jeunes Travailleurs Ste Constance à Metz
   description: Exposition des Hybrides Patibulaires et du groupe d'artistes "C'est Humain"
@@ -85,7 +83,7 @@
   postCode: 57000
   country: France
   comments: |
-     Performance exeptionnelle de Mirel&Cizek à l'occasion du vernissage le 03 juin à 17h30
+     Performance de Mirel&Cizek à l'occasion du vernissage le 03 juin à 17h30
   image: mirel-cizek-fjt-metz.jpg
   show : true
 
