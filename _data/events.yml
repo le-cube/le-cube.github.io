@@ -16,6 +16,19 @@
   image:
   show : true
 
+- name: Nouvelles activités
+  description: "De nouvelles activités seront proposées au Cube à partir de septembre (entre autres: ateliers)"
+  site:
+  startDate:
+  endDate:
+  adresse: "Espace Cube - 6, rue Robert Schuman"
+  city: Briey
+  postCode: 54150
+  country: France
+  comments:
+  image:
+  show : true
+  
 - name: Journées du patrimoine au Cube
   description: "A l'occasion des Journées Européennes du Patrimoine, Mirel&Cizek vous accueilleront au Cube les 19 et 20 septembre de 15h à 20h"
   site:
@@ -57,21 +70,6 @@
      L'exposition de Michel Rion se tiendra du 8 août au 13 septembre 2015
   image: expo-michel-rion-gorze.jpg
   show : true
-
-
-- name: Nouvelles activités
-  description: "De nouvelles activités seront proposées au Cube à partir de septembre (entre autres: ateliers)"
-  site:
-  startDate:
-  endDate:
-  adresse: "Espace Cube - 6, rue Robert Schuman"
-  city: Briey
-  postCode: 54150
-  country: France
-  comments:
-  image:
-  show : true
-
 
 
 - name: Expositions au Foyer des Jeunes Travailleurs Ste Constance à Metz
