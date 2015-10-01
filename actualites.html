@@ -11,18 +11,8 @@ weight : 60
 
 <div class="row events">
 
-    <h3>Prochains événements</h3>
-    <div class="col-md-12">
-    {% assign curDate = site.time | date: '%s' %}
-    {% assign printedPastEventTitle = false %}
-    {% assign descriptionDivClass = 'col-md-8 col-md-offset-2' %}
-
-    {% for e in site.data.events %}
-        {% if e.show == true %}
-            {% assign evtDate = e.endDate | date: '%s' %}
-            <hr>
-            {% if evtDate <= curDate and printedPastEventTitle == false %}
-                {% assign printedPastEventTitle = true %}
+   
+   
  <h3 class="pastEventMarker">Manifestations passées</h3>
             {% endif %}
         <div class="row">
@@ -94,3 +84,15 @@ weight : 60
         </div>
     </div>
 </div>
+ <h3>Prochains événements</h3>
+    <div class="col-md-12">
+    {% assign curDate = site.time | date: '%s' %}
+    {% assign printedPastEventTitle = false %}
+    {% assign descriptionDivClass = 'col-md-8 col-md-offset-2' %}
+
+    {% for e in site.data.events %}
+        {% if e.show == true %}
+            {% assign evtDate = e.endDate | date: '%s' %}
+            <hr>
+            {% if evtDate <= curDate and printedPastEventTitle == false %}
+                {% assign printedPastEventTitle = true %}
