@@ -61,6 +61,14 @@ body{
     }
 }
 
+.logoLink{
+    @media (max-width: $screen-xs-min) {
+        display: block;
+        width: 49%;
+        float: left;
+    }
+}
+
 .langButtons{
     position: absolute;
     top: 0;
