@@ -1,9 +1,33 @@
 ---
 layout: default
 title: Les Hybrides en Peinture
+nav-title: "Les&nbsp;Hybrides en&nbsp;Peinture"
 menu: main
-weight : 50
+weight : 40
 publish: false
 ---
 
 <h2>Les Hybrides en peinture</h2>
+
+<p>Rassurez vous, cette fois ce ne sont pas les Hybrides Patibulaires en chair et en os que vous amène Cizek, mais leur projection imaginaire sur la toile (la vraie, en coton), dans différents lieux qu'ils ont visités : Carpentras, Paris, Metz...</p>
+
+<blockquote>
+Je puise mon inspiration dans mon intérêt pour le vivant (en particulier les relations humain/animal), une fascination pour les objets anciens (ce qu'ils contiennent de leur vécu et de ce qu'ils ont vu) et leur environnement, c'est à dire leur espace de vie. Mon travail pictural, qui est un prolongement naturel des Hybrides Patibulaires, offre donc à voir une image inversée de l'humanité et du monde animal, humoristique et peu flatteuse, dans un monde intemporel, étrange et familier à la fois.
+</blockquote>
+
+
+{% assign maxObjectsInRow = 2 %}{% assign objectsInRow = 0 %}
+{% if objectsInRow == 0 %}<div class="row itemRow">{% endif %}
+
+  {% for item in site.peintures %}
+  <div class="col-xs-12 col-sm-6 col-md-6">
+    {% assign pageUrl = site.baseurl | append : item.url %}
+  <h3><a href="{{ pageUrl }}">{{ item.title }}</a></h3>
+  {% assign prefix = item.collection | append: "/" %}
+  {% assign baseName = item.id | split: prefix | last %}
+  {% assign thumbUrl = site.baseurl | append : '/img/peintures/thumbs/' | append : baseName | append: '-400.jpg' %}
+  <a href="{{ pageUrl }}"><img src="{{ thumbUrl }}" alt="{{ item.title }}"></a>
+  </div>
+  {% endfor %}
+
+{% if objectsInRow == maxObjectsInRow or forloop.last == true %}{% assign objectsInRow = 0 %}</div>{% endif %}
