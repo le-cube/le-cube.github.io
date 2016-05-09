@@ -10,17 +10,7 @@ url: "http://cube.fr"
 markdown: kramdown
 permalinks: pretty
 
-exclude: [LICENSE, README.md, Rakefile, c-est-humain]
-
-# DEPRECATED
-galleryDefaultSettings:
-    imgDefaultExtension: .jpg
-    imgDefaultThumbAppendString: -75
-    imgDefaultFormats:
-        500: -500
-    imgAltAppendString: ' - Mirel&Cizek'
-
-full_rebuild: true
+exclude: [LICENSE, README.md, Rakefile]
 
 sass:
   # loading path from site root
@@ -42,4 +32,14 @@ defaults:
     values:
       publish: true
 
+  -
+    scope:
+      path: ""
+      type: "peintures"
+    values:
+      layout: peinture
 
+collections:
+
+  peintures:
+    output: true
