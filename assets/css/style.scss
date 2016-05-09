@@ -53,12 +53,33 @@ body{
   margin-right: 0;
 }
 
+.navbar-nav{
+    display: table;
+    @media (max-width: $grid-float-breakpoint-max) {
+        display: inline-block;
+    }
+}
+.navbar-nav > li{
+    display: table-cell;
+    vertical-align: middle;
+    float: none !important;
+    text-align: center;
+    @media (max-width: $grid-float-breakpoint-max) {
+        position: relative;
+        display: block;
+    }
+}
+
 .navbar-nav>li>a {
     padding-top: 0;
     padding-bottom: 5px;
     @media (min-width: $grid-float-breakpoint) {
         border-bottom: 1px solid $body-bg;
     }
+}
+
+.nav > li > a{
+    padding: 7px 10px;
 }
 
 .logoLink{
@@ -110,6 +131,11 @@ footer a:hover{
     margin: 2px 0;
 }
 
+.itemRow.row{
+    margin-bottom: 0;
+}
+
+
 a.externalLink{
     background: #000 url(../../img/ExternalLinkIcon.gif) no-repeat top right;
     padding-right: 19px;
@@ -148,8 +174,8 @@ figure{
     text-align: left;
 
     @media (max-width: $screen-md) {
-        border: 1px solid $brand-warning-dark;
-        background: #222;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $gray-dark;
         margin-bottom: 10px;
     }
 }
