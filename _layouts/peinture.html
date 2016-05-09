@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-md-8">
+    <h2><small><a href="{{ site.baseurl }}/les-hybrides-en-peinture.html">Les Hybrides en peinture</a></small> &gt; {{ page.title }}</h2>
+  </div>
+  <div class="col-md-4">
+    <div class="subnavLinks clearfix">
+      <h5>
+      {% if page.previous %}
+      <a href="{{ site.baseurl }}{{ page.previous.url }}" class="btn btn-default btn-xs">&lt; {{ page.previous.title }}</a> |
+      {% endif %}
+      {% if page.next %}
+      <a href="{{ site.baseurl }}{{ page.next.url }}" class="btn btn-default btn-xs">{{ page.next.title }} &gt;</a>
+      {% endif %}
+      </h5>
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        {% if page.dimensions %}<p>Dimension : {{ page.dimensions }}</p>{% endif %}
+        {% if page.prix %}<p>Prix : {{ page.prix }}</p>{% endif %}
+    </div>
+    <div class="col-sm-8">
+      {% assign prefix = page.collection | append: "/" %}
+      {% assign baseName = page.id | split: prefix | last %}
+      {% assign thumbUrl = site.baseurl | append : '/img/peintures/' | append : baseName | append: '-800.jpg' %}
+      <img src="{{ thumbUrl }}" alt="page.title" class="img-responsive">
+    </div>
+</div>
