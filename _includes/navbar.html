@@ -8,7 +8,14 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav">
           {% assign pages = site.pages | sort:"weight" %}{% for p in pages %}{% if p.menu == 'main' and p.publish == true %}
-<li{% if p.url == page.url %} class="active"{% endif %}><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+
+{% if p.nav-title and p.nav-title != "" %}
+  {% assign title = p.nav-title %}
+{% else %}
+  {% assign title = p.title %}
+{% endif %}
+
+<li{% if p.url == page.url %} class="active"{% endif %}><a href="{{ site.baseurl }}{{ p.url }}">{{ title }}</a></li>
 {% endif %}{% endfor %}
           </ul>
         </div>
