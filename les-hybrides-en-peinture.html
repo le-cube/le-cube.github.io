@@ -4,7 +4,7 @@ title: Les Hybrides en Peinture
 nav-title: "Les&nbsp;Hybrides en&nbsp;Peinture"
 menu: main
 weight : 40
-publish: false
+publish: true
 ---
 
 <h2>Les Hybrides en peinture</h2>
@@ -25,7 +25,7 @@ Je puise mon inspiration dans mon intérêt pour le vivant (en particulier les r
   <h3><a href="{{ pageUrl }}">{{ item.title }}</a></h3>
   {% assign prefix = item.collection | append: "/" %}
   {% assign baseName = item.id | split: prefix | last %}
-  {% assign thumbUrl = site.baseurl | append : '/img/peintures/thumbs/' | append : baseName | append: '-400.jpg' %}
+  {% assign thumbUrl = site.baseurl | append : '/img/peintures/' | append : baseName | append: '-400.jpg' %}
   <a href="{{ pageUrl }}"><img src="{{ thumbUrl }}" alt="{{ item.title }}"></a>
   </div>
   {% endfor %}
