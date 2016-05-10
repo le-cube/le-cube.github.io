@@ -3,6 +3,33 @@
 # les plus récentes sont en haut de la page
 # l'ordre est important !!!!
 
+- name: Les Hybrides au Petit Montmartre - Carpentras
+  description: Rassurez vous, cette fois ce ne sont pas les Hybrides Patibulaires en chair et en os que vous amène Cizek, mais leur projection imaginaire sur la toile (la vraie, en coton). <br>Venez les découvrir dans différents lieux qu'ils ont visités, dont Carpentras, Paris, Metz...
+  startDate: 2015/05/14
+  endDate: 2015/06/14
+  adresse: Bar le Petit Montmartre, 40 rue David Guillabert
+  city: Carpentras
+  postCode: 84200
+  country: France
+  comments: Exposition du 14 mai au 14 juin, présence le 21 mai pour le "Printemps des Arts", vernissage le 20 mai à partir de 19h30.
+  image: petit-montmartre-carpentras.jpg
+  show : true
+
+- name: Salon d'Art Contemporain ART 3F Lyon
+  description: Jean Jacques Piezanowski, Cizek, Erik Bonnet attaquent Lyon avec leur expo "c'est humain"
+  site: http://www.art3f.com/
+  startDate: 2015/04/01
+  endDate: 2015/04/03
+  adresse: bd de l'Europe
+  city: Chassieu
+  postCode: 69680
+  country: France
+  comments: |
+          Vernissage le 1/04/2016 a partir de 18h !<br>
+          Horaires = Vendredi : 16-23h Samedi : 10-21h Dimanche : 10-20h
+  image: c-est-humain-art3f-lyon.jpg
+  show : true
+
 - name: Algrange
   description: Exposition des Hybrides Patibulaires et performance de Mirel et Cizek à Algrange le 11 septembre 2015 à 18h
   site: galerie-guy-pensa.fr
@@ -15,19 +42,6 @@
   comments: |
           horaires: du mardi au samedi de 10h à 12h et de 14h à 18h
   image: algrange1.jpg
-  show : true
-
-- name: Nouvelles activités
-  description: "De nouvelles activités seront proposées au Cube à partir de septembre (entre autres: ateliers)"
-  site:
-  startDate:
-  endDate:
-  adresse: "Espace Cube - 6, rue Robert Schuman"
-  city: Briey
-  postCode: 54150
-  country: France
-  comments:
-  image:
   show : true
 
 - name: Journées du patrimoine au Cube
