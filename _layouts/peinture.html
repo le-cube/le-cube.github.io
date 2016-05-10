@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div class="row">
-  <div class="col-md-8">
-    <h2><small><a href="{{ site.baseurl }}/les-hybrides-en-peinture.html">Les Hybrides en peinture</a></small> &gt; {{ page.title }}</h2>
+  <div class="col-md-12">
+    <h4><small><a href="{{ site.baseurl }}/les-hybrides-en-peinture.html">Les Hybrides en peinture</a></small> &gt; - {{ page.title }} - {{ page.comment }}</h4>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-12">
     <div class="subnavLinks clearfix">
 
 {% if page.previous %}{% assign previous = page.previous %}{% else %}{% assign previous = site.peintures | last %}{% endif %}

@@ -18,7 +18,8 @@ Je puise mon inspiration dans mon intérêt pour le vivant (en particulier les r
 {% assign maxObjectsInRow = 2 %}{% assign objectsInRow = 0 %}
 {% for item in site.peintures %}{% if objectsInRow == 0 %}<div class="row itemRow">{% endif %}{% assign objectsInRow = objectsInRow | plus: 1 %}
 <div class="col-xs-12 col-sm-6 col-md-6">{% assign pageUrl = site.baseurl | append : item.url %}
-<h3><a href="{{ pageUrl }}">{{ item.title }}</a></h3>{% assign prefix = item.collection | append: "/" %}{% assign baseName = item.id | split: prefix | last %}
+<h3><a href="{{ pageUrl }}">{{ item.title }}</a></h3>
+<h4><a href="{{ pageUrl }}">{{ item.comment }}</a></h4>{% assign prefix = item.collection | append: "/" %}{% assign baseName = item.id | split: prefix | last %}
 {% assign thumbUrl = site.baseurl | append : '/img/peintures/' | append : baseName | append: '-400.jpg' %}
 <a href="{{ pageUrl }}"><img src="{{ thumbUrl }}" alt="{{ item.title }}"></a>
 </div>
