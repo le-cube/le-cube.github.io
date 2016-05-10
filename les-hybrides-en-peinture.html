@@ -15,19 +15,12 @@ publish: true
 Je puise mon inspiration dans mon intérêt pour le vivant (en particulier les relations humain/animal), une fascination pour les objets anciens (ce qu'ils contiennent de leur vécu et de ce qu'ils ont vu) et leur environnement, c'est à dire leur espace de vie. Mon travail pictural, qui est un prolongement naturel des Hybrides Patibulaires, offre donc à voir une image inversée de l'humanité et du monde animal, humoristique et peu flatteuse, dans un monde intemporel, étrange et familier à la fois.
 </blockquote>
 
-
 {% assign maxObjectsInRow = 2 %}{% assign objectsInRow = 0 %}
-{% if objectsInRow == 0 %}<div class="row itemRow">{% endif %}
-
-  {% for item in site.peintures %}
-  <div class="col-xs-12 col-sm-6 col-md-6">
-    {% assign pageUrl = site.baseurl | append : item.url %}
-  <h3><a href="{{ pageUrl }}">{{ item.title }}</a></h3>
-  {% assign prefix = item.collection | append: "/" %}
-  {% assign baseName = item.id | split: prefix | last %}
-  {% assign thumbUrl = site.baseurl | append : '/img/peintures/' | append : baseName | append: '-400.jpg' %}
-  <a href="{{ pageUrl }}"><img src="{{ thumbUrl }}" alt="{{ item.title }}"></a>
-  </div>
-  {% endfor %}
-
+{% for item in site.peintures %}{% if objectsInRow == 0 %}<div class="row itemRow">{% endif %}{% assign objectsInRow = objectsInRow | plus: 1 %}
+<div class="col-xs-12 col-sm-6 col-md-6">{% assign pageUrl = site.baseurl | append : item.url %}
+<h3><a href="{{ pageUrl }}">{{ item.title }}</a></h3>{% assign prefix = item.collection | append: "/" %}{% assign baseName = item.id | split: prefix | last %}
+{% assign thumbUrl = site.baseurl | append : '/img/peintures/' | append : baseName | append: '-400.jpg' %}
+<a href="{{ pageUrl }}"><img src="{{ thumbUrl }}" alt="{{ item.title }}"></a>
+</div>
 {% if objectsInRow == maxObjectsInRow or forloop.last == true %}{% assign objectsInRow = 0 %}</div>{% endif %}
+{% endfor %}

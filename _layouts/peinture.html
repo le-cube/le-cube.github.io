@@ -8,13 +8,12 @@ layout: default
   </div>
   <div class="col-md-4">
     <div class="subnavLinks clearfix">
+
+{% if page.previous %}{% assign previous = page.previous %}{% else %}{% assign previous = site.peintures | last %}{% endif %}
+{% if page.next %}{% assign next = page.next %}{% else %}{% assign next = site.peintures | first %}{% endif %}
       <h5>
-      {% if page.previous %}
-      <a href="{{ site.baseurl }}{{ page.previous.url }}" class="btn btn-default btn-xs">&lt; {{ page.previous.title }}</a> |
-      {% endif %}
-      {% if page.next %}
-      <a href="{{ site.baseurl }}{{ page.next.url }}" class="btn btn-default btn-xs">{{ page.next.title }} &gt;</a>
-      {% endif %}
+        <a href="{{ site.baseurl }}{{ previous.url }}" class="btn btn-default btn-xs">&lt; {{ previous.title }}</a>&nbsp;
+        <a href="{{ site.baseurl }}{{ next.url }}" class="btn btn-default btn-xs">{{ next.title }} &gt;</a>
       </h5>
     </div>
   </div>
