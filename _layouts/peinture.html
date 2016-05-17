@@ -25,6 +25,9 @@ layout: default
     </div>
     <div class="col-sm-8">
       {% assign prefix = page.collection | append: "/" %}
+
+<!-- page.id = {{ page.id }} -->
+
       {% assign baseName = page.id | split: prefix | last %}
       {% assign thumbUrl = site.baseurl | append : '/img/peintures/' | append : baseName | append: '-800.jpg' %}
       <img src="{{ thumbUrl }}" alt="page.title" class="img-responsive">

@@ -20,6 +20,7 @@ Je puise mon inspiration dans mon intérêt pour le vivant (en particulier les r
 <div class="col-xs-12 col-sm-6 col-md-6">{% assign pageUrl = site.baseurl | append : item.url %}
 <h3><a href="{{ pageUrl }}">{{ item.title }}</a></h3>
 <h4><a href="{{ pageUrl }}">{{ item.comment }}</a></h4>{% assign prefix = item.collection | append: "/" %}{% assign baseName = item.id | split: prefix | last %}
+<!-- item.id = {{ item.id }} -->
 {% assign thumbUrl = site.baseurl | append : '/img/peintures/' | append : baseName | append: '-400.jpg' %}
 <a href="{{ pageUrl }}"><img src="{{ thumbUrl }}" alt="{{ item.title }}"></a>
 </div>
