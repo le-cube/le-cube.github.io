@@ -1,6 +1,6 @@
 ---
 title: Rond de tronche d'Hybride 02
 comment: Imall
-dimensions: 60x60
-prix: 950€
+dimensions: D=40cm
+prix: 360€
 ---
