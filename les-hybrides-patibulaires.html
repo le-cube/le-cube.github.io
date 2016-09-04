@@ -14,7 +14,8 @@ weight : 30
         <h3 class="clearfix">{{ cat.name }}</h3>
     </div>
         {% assign maxObjectsInRow = 2 %}{% assign objectsInRow = 0 %}
-{% for p in site.pages | sort:"name" %}
+{% assign sorted = site.pages | sort:"name" %}
+{% for p in sorted %}
     {% if p.category == cat.slug and p.show == 'oui' %}
         {% if objectsInRow == 0 %}
     <div class="row itemRow">{% endif %}

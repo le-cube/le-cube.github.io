@@ -3,6 +3,20 @@
 # les plus récentes sont en haut de la page
 # l'ordre est important !!!!
 
+- name: Journées Européennes du Patrimoine au Cube (ancienne chaufferie de la Cité Radieuse, Le Corbusier)
+  description: Visite du bâtiment, de la Maison des Hybrides Patibulaires, expositions d'art par "C'est Humain" et bijoux au crochet à dentelle par Mahia, concerts.<br>  <a href="https://www.facebook.com/events/549797215228323/">Programme détaillé sur l'événement facebook</a>.
+  site:
+  startDate: 17/09/2015
+  endDate:
+  adresse: 6, rue Robert Schuman
+  city: Briey
+  postCode: 54150
+  country: France
+  comments: |
+          à partir de 10h
+  image: journees-patrimoine-2016-le-cube.jpg
+  show : true
+
 - name: Les Hybrides au Petit Montmartre - Carpentras
   description: Rassurez vous, cette fois ce ne sont pas les Hybrides Patibulaires en chair et en os que vous amène Cizek, mais leur projection imaginaire sur la toile (la vraie, en coton). <br>Venez les découvrir dans différents lieux qu'ils ont visités, dont Carpentras, Paris, Metz...
   startDate: 2015/05/14
